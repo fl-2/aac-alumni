@@ -1,5 +1,5 @@
 assetDir = "assets"
-baseURL = "./"
+baseURL = "https://ut-aac.com/"
 buildFuture = true
 disableKinds = ["section", "taxonomyTerm", "about", "categories", "sitemap", "RSS"]
 languageCode = "en-us"
