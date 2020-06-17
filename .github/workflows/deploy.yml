@@ -20,7 +20,7 @@ jobs:
           hugo-version: '0.68.3'
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify && cp ./CNAME ./public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
