@@ -1,5 +1,5 @@
 +++
-name = "My Quach (Minah)"
+name = "My \"Minah\" Quach"
 picture = "/images/myquachminah.jpg"
 date = 2020-01-01T00:00:00Z
 degrees = ["BA Asian Language and Culture"]
