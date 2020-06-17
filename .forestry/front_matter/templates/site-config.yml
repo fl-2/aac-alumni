@@ -1,0 +1,32 @@
+---
+label: Site Config
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+  default: The Title
+- type: text
+  name: languageCode
+  label: languageCode
+  default: en
+- name: params
+  type: field_group
+  config: {}
+  fields:
+  - name: description
+    type: text
+    label: Description
+    description: Shown in search previews (under the title in Google, less than 160
+      characters)
+- type: text
+  name: baseURL
+  label: baseURL
+  default: "/"
+  hidden: true
+- type: text
+  name: theme
+  label: theme
+  hidden: true
+pages:
+- config.toml

@@ -1,0 +1,13 @@
+<footer>
+	<div class="social">
+		{{ range where .Site.RegularPages "Section" "about" }}
+		<div>
+			<a href="{{ .Params.aac_social.link }}">{{ .Params.aac_social.label }}</a>
+			<a href="{{ .Params.utcee_social.link }}">{{ .Params.utcee_social.label }}</a>
+		</div>
+		{{ end }}
+	</div>
+	<div class="legal">
+		<div>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
+	</div>
+</footer>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode | default "en-us" }}'>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>{{ .Title }}</title>
+		<meta name="title" content="{{ .Title }}" />
+		<meta property="og:title" content="{{ .Title }}" />
+		<meta property="twitter:title" content="{{ .Title }}" />
+		{{ with .Site.Params.description }}
+		<meta name="description" content="{{ . }}" />
+		<meta property="og:description" content="{{ . }}" />
+		<meta property="twitter:description" content="{{ . }}" />
+		{{ end }}
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{ .Site.BaseURL }}" />
+		<meta property="og:image" content='{{ "socialpreview.png" | absURL }}'>
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="{{ .Site.BaseURL }}" />
+		<meta property="twitter:image" content='{{ "socialpreview.png" | absURL }}'>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#4a544a" />
+		<meta name="theme-color" content="#4a544a" />
+	</head>
+	<body>
+		{{ partial "header" . }}
+		{{ block "main" . }}{{ end }}
+		{{ partial "footer" . }}
+		<script src="js/circletype.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

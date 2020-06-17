@@ -1,0 +1,37 @@
+{{ define "main" }}
+
+{{ $endOfYear := time (now.Format "2006" | printf "%s-12-31") }}
+{{ $cutoff := 2017 }}
+
+<main>
+	<div class="cohorts">
+		<div>
+			<div class="element">
+				<h2>Meet the Cohorts</h2>
+			</div>
+			{{ range (where (where .Site.RegularPages "Date" "<" $endOfYear) "Section" "people").GroupByDate "2006" }}
+				{{ if gt .Key $cutoff }}
+				<a href="#{{ .Key }}"><span>{{ .Key }}</span></a>
+				{{ end }}
+			{{ end }}
+			<a href="#earlier"><span>earlier</span></a>
+		</div>
+	</div>
+
+	<div class="people">
+		{{ range (where (where .Site.RegularPages "Date" "<" $endOfYear) "Section" "people").GroupByDate "2006" }}
+			{{ if ge .Key $cutoff }}
+				{{ if gt .Key $cutoff }}
+				<h2 id="{{ .Key }}">{{ .Key }} Graduates</h2>
+				{{ else }}
+				<h2 id="earlier">Earlier Graduates</h2>
+				{{ end }}
+			{{ end }}
+
+			{{ range .Pages.ByParam "name" }}
+			{{ partial "profile.html" . }}
+			{{ end }}
+		{{ end }}
+	</div>
+</main>
+{{ end }}

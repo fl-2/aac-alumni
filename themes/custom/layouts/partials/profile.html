@@ -1,0 +1,37 @@
+{{ $image := (resources.Get .Params.picture).Fill "400x600 Center jpg q75" }}
+<div class="person">
+	<img src=".{{ $image.RelPermalink }}" alt="Picture of {{ .Params.name }}"
+		width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" />
+	<h3>{{ .Params.name }}</h3>
+
+	<div class="year">Class of {{ .Date.Format "2006" }}</div>
+	<div class="degrees">{{ delimit .Params.degrees ", " }}</div>
+
+	<div class="links">
+		{{ if .Params.twitter_username }}
+		<a href="https://twitter.com/{{.Params.twitter_username }}" title="Twitter">
+			<i class="icon-bird"></i>
+		</a>
+		{{ end }}
+		{{ if .Params.instagram_username }}
+		<a href="https://instagram.com/{{.Params.instagram_username }}" title="Instagram">
+			<i class="icon-gramin"></i>
+		</a>
+		{{ end }}
+		{{ if .Params.github_username }}
+		<a href="https://github.com/{{.Params.github_username }}" title="GitHub">
+			<i class="icon-codes"></i>
+		</a>
+		{{ end }}
+		{{ if .Params.linkedin_username }}
+		<a href="https://linkedin.com/in/{{.Params.linkedin_username }}" title="LinkedIn">
+			<i class="icon-business"></i>
+		</a>
+		{{ end }}
+		{{ if .Params.website }}
+		<a href="{{.Params.website }}" title="Website">
+			<i class="icon-link"></i>
+		</a>
+		{{ end }}
+	</div>
+</div>

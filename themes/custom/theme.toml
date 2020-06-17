@@ -1,0 +1,6 @@
+name = "Custom"
+min_version = "0.20"
+
+[author]
+  name = "Florian"
+  homepage = "https://github.com/jaflo"

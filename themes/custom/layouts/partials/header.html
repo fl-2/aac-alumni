@@ -1,0 +1,14 @@
+<header>
+	<h1><a href="{{ .Site.BaseURL }}">
+		<div class="spinny">
+			<div class="spin"></div>
+		</div>
+		<div class="plain">{{ .Site.Title }}</div>
+	</a></h1>
+
+	<div class="about">
+		{{ range where .Site.RegularPages "Section" "about" }}
+		{{ .Content }}
+		{{ end }}
+	</div>
+</header>

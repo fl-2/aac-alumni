@@ -1,0 +1,51 @@
+---
+label: About Section
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+  hidden: true
+- name: aac_social
+  type: field_group
+  config: {}
+  fields:
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link URL
+    description: The full page URL
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Link text
+    description: The text shown
+  label: AAC social media
+  description: Enter social media link for AAC here
+- name: utcee_social
+  type: field_group
+  config: {}
+  fields:
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link URL
+    description: The full page URL
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Link text
+    description: The text shown
+  label: E+E social media
+  description: Enter social media link for E+E here
+- type: text
+  name: type
+  label: type
+  default: about
+  hidden: true
+pages:
+- content/about/about.md

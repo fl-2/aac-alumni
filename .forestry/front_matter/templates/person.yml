@@ -1,0 +1,97 @@
+---
+label: Person
+hide_body: true
+display_field: name
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: The person's name
+- name: date
+  type: datetime
+  label: Year
+  description: Class of YYYY (2020, etc.)
+  config:
+    required: true
+    date_format: YYYY
+  default: now
+- name: degrees
+  type: tag_list
+  default: []
+  label: Degrees
+  description: Enter each degree separately, avoid abbreviations (Computer Science
+    instead of CS)
+- name: picture
+  type: file
+  config:
+    maxSize: 64
+  label: Picture
+- type: text
+  name: type
+  label: type
+  default: person
+  hidden: true
+- name: twitter_username
+  type: text
+  config:
+    required: false
+  label: Twitter
+  description: Twitter username here (everything after @)
+- name: instagram_username
+  type: text
+  config:
+    required: false
+  label: Instagram
+  description: Instagram username (optional, everything after @)
+- name: github_username
+  type: text
+  config:
+    required: false
+  label: GitHub
+  description: GitHub username (optional, everything after @)
+- name: linkedin_username
+  type: text
+  config:
+    required: false
+  label: LinkedIn
+  description: LinkedIn username (optional, everything after /in/)
+- name: website
+  type: text
+  config:
+    required: false
+  label: Website
+  description: Full website URL (optional, including http)
+pages:
+- content/people/florianjongjanke.md
+- content/people/ivynguyenkhuc.md
+- content/people/tiffanychung.md
+- content/people/myquachminah.md
+- content/people/austinclee.md
+- content/people/estherna.md
+- content/people/justinbanh.md
+- content/people/anthonynguyen.md
+- content/people/christinaloo.md
+- content/people/minhthinguyen.md
+- content/people/elizabethellabarwick.md
+- content/people/wesleytsai.md
+- content/people/thanhbui.md
+- content/people/helentran.md
+- content/people/lillianwong.md
+- content/people/amandaleija.md
+- content/people/stephanysunny.md
+- content/people/ericfeiluo.md
+- content/people/tiararogerboquiren.md
+- content/people/celinelow.md
+- content/people/jasmineyang.md
+- content/people/calebchang.md
+- content/people/vananhvandinh.md
+- content/people/helenyang.md
+- content/people/arismichaelbrionesguevara.md
+- content/people/christycoe.md
+- content/people/alyssafield.md
+- content/people/michellechan.md
+- content/people/michellevan.md
+- content/people/justineng.md
+- content/people/chenleolin.md

@@ -1,0 +1,9 @@
+assetDir = "assets"
+baseURL = "./"
+buildFuture = true
+disableKinds = ["section", "taxonomyTerm", "about", "categories", "sitemap", "RSS"]
+languageCode = "en-us"
+theme = "custom"
+title = "Asian American Culture"
+[params]
+description = "The Asian American Culture committee (part of UT Austin's E+E) promotes Asian and Asian American cultures through campus events throughout the year."
