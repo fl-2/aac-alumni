@@ -1,12 +1,13 @@
 +++
-name = "Elizabeth \"Ella\" Barwick"
-picture = "/images/elizabethellabarwick.jpg"
 date = 2020-01-01T00:00:00Z
 degrees = ["BS Environmental Engineering"]
-twitter_username = "eobarwick"
-instagram_username = "ellaoceann"
 github_username = ""
+instagram_username = "ellaoceann"
 linkedin_username = "eobarwick"
-website = ""
+name = "Elizabeth \"Ella\" Barwick"
+picture = "/images/elizabethellabarwick.jpg"
+twitter_username = ""
+type = ""
+website = "https://capturedbyocean.com/"
 
 +++
